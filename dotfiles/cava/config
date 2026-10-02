@@ -1,0 +1,13 @@
+[general]
+framerate = 60
+bars = 20
+
+[output]
+method = ncurses
+channels = mono
+
+[color]
+background = default
+gradient = 1
+gradient_color_1 = '#8b0000'
+gradient_color_2 = '#7fd4d4'

@@ -1,0 +1,60 @@
+* {
+    bg-color: #0a0a0a;
+    bg-color-alt: #1a1a1a;
+    fg-color: #dcdcdc;
+    accent: #8b0000;
+    cyan: #7fd4d4;
+    
+    font: "Iosevka Nerd Font 12";
+}
+
+window {
+    width: 600px;
+    border: 1px;
+    border-color: @accent;
+    background-color: @bg-color;
+}
+
+mainbox {
+    background-color: @bg-color;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-color-alt;
+    border: 1px;
+    border-color: @accent;
+    padding: 8px;
+}
+
+prompt {
+    text-color: @cyan;
+}
+
+entry {
+    text-color: @fg-color;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    background-color: @bg-color;
+}
+
+element {
+    padding: 8px;
+    text-color: @fg-color;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg-color;
+}
+
+message {
+    background-color: @bg-color-alt;
+    border: 1px;
+    border-color: @cyan;
+    padding: 8px;
+    text-color: @cyan;
+}

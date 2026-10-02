@@ -1,0 +1,12 @@
+/* Минимальные переопределения для GTK */
+@define-color theme_bg_color #0a0a0a;
+@define-color theme_fg_color #dcdcdc;
+@define-color theme_selected_bg_color #8b0000;
+@define-color theme_selected_fg_color #0a0a0a;
+
+/* Убираем скругления для более "жёсткого" вида */
+.window-frame, .window-frame:backdrop {
+    border-radius: 0;
+    border-style: none;
+    box-shadow: none;
+}

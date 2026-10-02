@@ -1,0 +1,11 @@
+# Принудительно используем LF для всех конфигов и скриптов
+*.sh text eol=lf
+*.conf text eol=lf
+*.ini text eol=lf
+*.rasi text eol=lf
+*.css text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+*.jsonc text eol=lf
+*.glsl text eol=lf

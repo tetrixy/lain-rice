@@ -1,0 +1,5 @@
+ttf-iosevka-nerd
+ttf-jetbrains-mono-nerd
+i3lock-color
+betterlockscreen
+cava

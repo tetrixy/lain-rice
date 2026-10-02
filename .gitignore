@@ -1,0 +1,15 @@
+# Бэкапы и логи
+.lain-rice-backup/
+.lain-rice-install.log
+
+# Сгенерированные обои
+.wallpapers/
+
+# Системный мусор
+.DS_Store
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,54 @@
+# i3 config file (v4) | Serial Experiments Lain Theme
+set $mod Mod4
+set $mod1 Mod1
+
+# Шрифты
+font pango:Iosevka Nerd Font 10
+
+# Отступы и рамки (минимализм)
+gaps inner 8
+gaps outer 4
+new_window none
+new_float normal
+hide_edge_borders both
+
+# Цвета (Глубокий чёрный, тёмно-серый, приглушённый красный)
+client.focused          #1a1a1a #8b0000 #dcdcdc #1a1a1a
+client.focused_inactive #1a1a1a #1a1a1a #7fd4d4 #1a1a1a
+client.unfocused        #0a0a0a #0a0a0a #555555 #0a0a0a
+client.urgent           #8b0000 #8b0000 #dcdcdc #8b0000
+client.placeholder      #0a0a0a #0a0a0a #dcdcdc #0a0a0a
+client.background       #0a0a0a
+
+# Автозапуск
+exec --no-startup-id picom --backend glx --config ~/.config/picom/picom.conf
+exec --no-startup-id ~/.config/polybar/launch.sh 
+exec --no-startup-id dunst &
+exec --no-startup-id clipmenud &
+exec --no-startup-id feh --no-fehbg --randomize --recursive ~/.wallpapers/
+
+# Раскладка: Alt+Shift для переключения, CapsLock как Escape
+exec --no-startup-id setxkbmap -layout us,ru -option grp:alt_shift_toggle,caps:escape
+
+# Бинды (используем keysym для работы в любой раскладке)
+bindsym --release $mod+Return exec kitty
+bindsym --release $mod+d exec rofi -show drun -config ~/.config/rofi/lain.rasi
+bindsym --release $mod+Shift+q kill
+bindsym --release $mod+f fullscreen toggle
+bindsym --release $mod+h focus left
+bindsym --release $mod+j focus down
+bindsym --release $mod+k focus up
+bindsym --release $mod+l focus right
+bindsym --release $mod+Shift+h move left
+bindsym --release $mod+Shift+j move down
+bindsym --release $mod+Shift+k move up
+bindsym --release $mod+Shift+l move right
+
+# Скриншоты
+bindsym --release Print exec maim -u | xclip -selection clipboard -t image/png
+
+# Меню питания
+bindsym --release $mod+Shift+e exec ~/.config/rofi/powermenu.sh
+
+# Перезапуск polybar
+bindsym --release $mod+Shift+r exec pkill polybar; polybar -q main &

@@ -1,0 +1,50 @@
+# Оконный менеджер и композитор
+i3-wm
+picom
+
+# Панель задач и уведомления
+polybar
+dunst
+
+# Лаунчер и меню
+rofi
+
+# Терминалы (установится один из них)
+kitty
+alacritty
+
+# Обои и управление экраном
+feh
+nitrogen
+xorg-xsetroot
+xorg-xrandr
+xorg-xev
+
+# Скриншоты и буфер обмена
+maim
+slop
+xclip
+clipmenu
+
+# Обработка изображений (для генератора обоев)
+imagemagick
+
+# Базовые утилиты для работы с железом
+lshw
+pciutils
+usbutils
+dmidecode
+acpi
+powertop
+
+# Драйверы ввода
+xf86-input-libinput
+
+# Аудио (если не установлен PipeWire/PulseAudio)
+# pipewire
+# pipewire-alsa
+# pipewire-pulse
+# wireplumber
+
+# Блокировка экрана
+i3lock
